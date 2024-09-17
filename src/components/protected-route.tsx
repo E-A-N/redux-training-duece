@@ -3,8 +3,8 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoute = () => {
 
-  const randoAuth = Math.random() > 0.1;
-  const [authenticated] = useState(randoAuth);
+  // const randoAuth = Math.random() > 0.1;
+  const [authenticated] = useState(true);
 
   return authenticated ? <Outlet /> : <Navigate to="/auth" />;
 };
